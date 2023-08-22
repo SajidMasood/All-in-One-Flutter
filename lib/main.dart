@@ -1,22 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
-import 'view/screens/homescreen/home_screen.dart';
+import 'language/app_translations.dart';
 import 'view/screens/splashscreen/splash_screen.dart';
 
+Future<void> main() async {
+  /* it required by the depandency */
+  await GetStorage.init();
+  final _box = GetStorage();
 
-void main() {
-  runApp(const MyApp());
+  /* language */
+  dynamic langValue = const Locale('en', 'US');
+  if (_box.read('lang') != null) {
+    langValue = Locale(_box.read('lang'), _box.read('langKey'));
+  } else {
+    langValue = const Locale('en', 'US');
+  }
+  runApp(MyApp(lang: langValue));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final Locale lang;
+  const MyApp({super.key, required this.lang});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      // translations: AppTranslations(),
+      translations: AppTranslations(),
+      locale: lang,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,

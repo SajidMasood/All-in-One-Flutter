@@ -1,7 +1,4 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_internationalization_getx/view/screens/auth/sign_in.dart';
 import 'package:get/get.dart';
 
 import '../view/screens/homescreen/home_screen.dart';
@@ -32,8 +29,8 @@ class SplashScreenController extends GetxController
     //
     animationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        // Get.off(() => HomeScreen());
-        Get.off(() => SignIn());
+        Get.off(() => HomeScreen());
+        // Get.off(() => SignIn());
       }
     });
     //

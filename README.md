@@ -36,3 +36,9 @@ samples, guidance on mobile development, and a full API reference.
 • [get](https://pub.dev/packages/get) for State management
 • [Google Fonts](https://pub.dev/packages/google_fonts) for Google Fonts Family
 • [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons) for launcher icon
+• [nb_utils](https://pub.dev/packages/nb_utils) for State management
+• [get](https://pub.dev/packages/get) for State management
+• [get](https://pub.dev/packages/get) for State management
+• [get](https://pub.dev/packages/get) for State management
+• [get](https://pub.dev/packages/get) for State management
+• [get](https://pub.dev/packages/get) for State management
