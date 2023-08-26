@@ -3,7 +3,9 @@
 # flutter Internationalization With getx
 
 • in this repo I am try to implement localization using getX.
+
 • try to implement Splash Screen.
+
 • custom Text Widget
 •
 
@@ -33,12 +35,15 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Details
 
-• [get](https://pub.dev/packages/get) for State management
-• [Google Fonts](https://pub.dev/packages/google_fonts) for Google Fonts Family
-• [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons) for launcher icon
-• [nb_utils](https://pub.dev/packages/nb_utils) for State management
-• [get](https://pub.dev/packages/get) for State management
-• [get](https://pub.dev/packages/get) for State management
-• [get](https://pub.dev/packages/get) for State management
-• [get](https://pub.dev/packages/get) for State management
-• [get](https://pub.dev/packages/get) for State management
+- [get](https://pub.dev/packages/get) for State management
+- [Google Fonts](https://pub.dev/packages/google_fonts) for Google Fonts Family
+- [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons) for launcher icon
+
+- [google_mobile_ads](https://pub.dev/packages/google_mobile_ads/) for Admob management
+
+- [material_dialogs](https://pub.dev/packages/material_dialogs) for Material Dialog Box
+
+- [get](https://pub.dev/packages/get) for State management
+- [get](https://pub.dev/packages/get) for State management
+- [get](https://pub.dev/packages/get) for State management
+- [get](https://pub.dev/packages/get) for State management

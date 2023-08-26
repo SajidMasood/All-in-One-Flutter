@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import 'language/app_translations.dart';
 import 'view/screens/splashscreen/splash_screen.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   /* it required by the depandency */
+  MobileAds.instance.initialize();
   await GetStorage.init();
   final _box = GetStorage();
 
