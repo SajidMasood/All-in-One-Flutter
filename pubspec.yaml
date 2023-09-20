@@ -20,6 +20,20 @@ dependencies:
   material_dialogs:
   lottie:
 
+  # liquid swipe & smooth_page_indicator on boarding screen...
+  liquid_swipe:
+  smooth_page_indicator:
+
+  flutter_otp_text_field:
+  # go to main.dart
+  onesignal_flutter: ^3.5.0
+
+  # Firebase Database Connection
+  firebase_core:
+  firebase_messaging:
+  firebase_database:
+  firebase_auth:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -38,6 +52,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/figma/
     - assets/json/
     - assets/fonts/
 

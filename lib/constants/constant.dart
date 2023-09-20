@@ -29,6 +29,14 @@ const kInputDecoration = InputDecoration(
   ),
 );
 
+const kButtonDecoration = BoxDecoration(
+  color: kMainColor,
+  borderRadius: BorderRadius.all(
+    Radius.circular(40.0),
+  ),
+);
+
+
 List<String> language = [
   'English',
   'French',

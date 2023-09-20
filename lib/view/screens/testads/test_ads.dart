@@ -1,11 +1,16 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_internationalization_getx/constants/constant.dart';
+import 'package:flutter_internationalization_getx/view/widgets/button_global.dart';
+import 'package:flutter_internationalization_getx/view/widgets/button_global_with_icon.dart';
 
 import '../../../services/ad_helper.dart';
 
 class TestAds extends StatefulWidget {
-  TestAds({super.key});
+  final String postId;
+
+  TestAds({super.key, required this.postId});
 
   @override
   State<TestAds> createState() => _TestAdsState();
@@ -32,49 +37,48 @@ class _TestAdsState extends State<TestAds> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter AdMob '),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: IconButton(
-                icon: Icon(Icons.ac_unit),
-                onPressed: () {
-                  adHelper.showInterstitialAd();
-                },
-              ),
-            ),
-          ],
-        ),
+        /* AppBar  */
+        appBar: _appBar(),
+
+        /* Body of Scaffold */
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Text(widget.postId),
             ElevatedButton(
               onPressed: () {
-                //adManager.disposeAds();
                 log("pressed....................");
               },
-              child: const Text('Go to Second Screen'),
+              child: const Text('Show Google Ads'),
             ),
             const SizedBox(height: 32),
 
             /* Interstitial Ad */
             Center(
-              child: ElevatedButton(
-                child: const Text('Show Interstitial'),
+              child: ButtonGlobal(
                 onPressed: () {
-                  //adManager.showInterstitial();
+                  adHelper.showInterstitialAd();
                 },
+                buttontext: 'Show Interstitial',
+                buttonDecoration: kButtonDecoration,
               ),
             ),
             const SizedBox(height: 32),
 
             /* Rewarded Ad */
             Center(
-              child: ElevatedButton(
-                child: Text("RewardedAd"),
+              // child: ElevatedButton(
+              //   child: Text("RewardedAd"),
+              //   onPressed: () {
+              //     log("show rewarded ads button");
+              //     adHelper.showRewardedAd();
+              //   },
+              // ),
+              child: ButtonGlobalWithoutIcon(
+                buttontext: 'Show Rewarded Ads',
+                buttonDecoration: kButtonDecoration,
+                buttonTextColor: kBorderColorTextField,
                 onPressed: () {
-                  log("show rewarded ads button");
                   adHelper.showRewardedAd();
                 },
               ),
@@ -89,6 +93,23 @@ class _TestAdsState extends State<TestAds> {
           ],
         ),
       ),
+    );
+  }
+
+  AppBar _appBar() {
+    return AppBar(
+      title: const Text('Google AdMob '),
+      actions: [
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: IconButton(
+            icon: Icon(Icons.ads_click_sharp),
+            onPressed: () {
+              adHelper.showInterstitialAd();
+            },
+          ),
+        ),
+      ],
     );
   }
 }

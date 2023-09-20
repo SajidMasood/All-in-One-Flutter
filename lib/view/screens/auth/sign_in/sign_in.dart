@@ -1,12 +1,13 @@
 import 'dart:developer';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_internationalization_getx/constants/constant.dart';
 import 'package:flutter_internationalization_getx/utils/image.dart';
 import 'package:flutter_internationalization_getx/view/widgets/my_text.dart';
 
-import '../../widgets/app_text_field.dart';
-import '../../widgets/button_global.dart';
+import '../../../widgets/app_text_field.dart';
+import '../../../widgets/button_global.dart';
 
 class SignIn extends StatefulWidget {
   SignIn({super.key});
@@ -19,6 +20,14 @@ class _SignInState extends State<SignIn> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   bool isChecked = true;
+
+
+  @override
+  dispose(){
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -164,6 +173,7 @@ class _SignInState extends State<SignIn> {
                                 ),
                                 onPressed: () {
                                   log('Butten Pressed');
+                                  signIn;
                                 },
                               ),
                               SizedBox(height: 10.0),
@@ -205,6 +215,14 @@ class _SignInState extends State<SignIn> {
           ],
         ),
       ),
+    );
+  }
+
+  /* Sign In Button Clicked  */
+  Future signIn() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: _emailController.text.trim(),
+      password: _passwordController.text.trim(),
     );
   }
 }

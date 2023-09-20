@@ -5,6 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_internationalization_getx/controller/language_controller.dart';
 import 'package:flutter_internationalization_getx/model/language_model.dart';
 import 'package:flutter_internationalization_getx/services/admob_helper.dart';
+import 'package:flutter_internationalization_getx/utils/size_config.dart';
+import 'package:flutter_internationalization_getx/view/screens/auth/sign_in/sign_in.dart';
+import 'package:flutter_internationalization_getx/view/widgets/button_global.dart';
 import 'package:flutter_internationalization_getx/view/widgets/my_text.dart';
 import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -16,6 +19,7 @@ import 'package:material_dialogs/widgets/buttons/icon_outline_button.dart';
 
 import '../../../constants/constant.dart';
 import '../../../services/ad_helper.dart';
+import '../../widgets/button_global_with_icon.dart';
 import '../testads/test_ads.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -52,24 +56,55 @@ class _HomeScreenState extends State<HomeScreen> {
         .languageList
         .indexWhere((i) => i.locale == Get.locale)];
 
+    /* Calling Custom Config Size Class */
+    SizeConfigCustom sizeConfig = SizeConfigCustom();
+    sizeConfig.init(context);
+
     return WillPopScope(
       onWillPop: () => bottomDialogSheetAnimated(context),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: kBorderColorTextField,
         appBar: _appBar(context),
         body: SafeArea(
           child: Stack(
             children: [
               Center(
-                child: GestureDetector(
-                  onTap: () => Get.to(() => TestAds()),
-                  child: Text(
-                    "home_screen".tr,
-                  ),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 40),
+                    Center(
+                      child: ButtonGlobalWithoutIcon(
+                        //"home_screen".tr,
+                        buttontext: 'Check Ads',
+                        buttonTextColor: kBorderColorTextField,
+                        buttonDecoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30.0),
+                          color: kMainColor,
+                        ),
+                        onPressed: () {
+                          Get.to(() => TestAds(postId: '',));
+                        },
+                      ),
+                    ),
+
+                    /* show Authentication */
+                    ButtonGlobal(
+                      buttontext: 'Show Auth',
+                      buttonDecoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30.0),
+                        color: kMainColor,
+                      ),
+                      onPressed: () {
+                        Get.to(() => SignIn());
+                      },
+                    ),
+                  ],
                 ),
               ),
 
               //
-              if (_bannerAd != null)
+              /* if (_bannerAd != null)
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: SizedBox(
@@ -77,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: _bannerAd!.size.height.toDouble(),
                     child: AdWidget(ad: _bannerAd!),
                   ),
-                )
+                ) */
             ],
           ),
         ),

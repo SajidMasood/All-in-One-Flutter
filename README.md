@@ -3,11 +3,10 @@
 # flutter Internationalization With getx
 
 • in this repo I am try to implement localization using getX.
-
-• try to implement Splash Screen.
-
-• custom Text Widget
-•
+• Splash Screen.
+• Custom Text, Buttons and TextFormField
+• Custom Theme: light & dark main.dart-> MaterialApp(theme: ThemeData())
+• On Boarding Screen with Animation and Animate Welcome Screen
 
 ## Screenshots
 
@@ -22,28 +21,19 @@
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
 ## Details
 
-- [get](https://pub.dev/packages/get) for State management
+- [get](https://pub.dev/packages/get), for Dependancy Injection, Navigation and State Management
 - [Google Fonts](https://pub.dev/packages/google_fonts) for Google Fonts Family
 - [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons) for launcher icon
-
-- [google_mobile_ads](https://pub.dev/packages/google_mobile_ads/) for Admob management
-
-- [material_dialogs](https://pub.dev/packages/material_dialogs) for Material Dialog Box
-
-- [get](https://pub.dev/packages/get) for State management
-- [get](https://pub.dev/packages/get) for State management
-- [get](https://pub.dev/packages/get) for State management
+- [google_mobile_ads](https://pub.dev/packages/google_mobile_ads/) for Admob management.
+- [material_dialogs](https://pub.dev/packages/material_dialogs) for Material Dialog Box.
+- [liquid_swipe:](https://pub.dev/packages/liquid_swipe) for on Boarding liquid Swipe.
+- [smooth_page_indicator](https://pub.dev/packages/smooth_page_indicator) Customizable animated page indicator with a set of built-in effects.
+- [flutter_otp_text_field](https://pub.dev/packages/flutter_otp_text_field) for OTP Text Fields
 - [get](https://pub.dev/packages/get) for State management

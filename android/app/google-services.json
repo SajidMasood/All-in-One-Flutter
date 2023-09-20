@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "46016713887",
+    "firebase_url": "https://photo-blog-be477.firebaseio.com",
+    "project_id": "photo-blog-be477",
+    "storage_bucket": "photo-blog-be477.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46016713887:android:b8f41b465b7e200c58feaa",
+        "android_client_info": {
+          "package_name": "com.codsoft.to_do_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46016713887-rhj8f4llu5a4ogtbsblmao0230saqfad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWbi8x1m8GriPIdcoEpA7RbIhRi7z-TDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46016713887-rhj8f4llu5a4ogtbsblmao0230saqfad.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46016713887:android:16dec4a0119c3e1858feaa",
+        "android_client_info": {
+          "package_name": "com.example.flutter_internationalization_getx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46016713887-rhj8f4llu5a4ogtbsblmao0230saqfad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWbi8x1m8GriPIdcoEpA7RbIhRi7z-TDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46016713887-rhj8f4llu5a4ogtbsblmao0230saqfad.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
